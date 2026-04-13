@@ -2,24 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://www.perplexity.ai/computer/a/tudelu-ai-portal-v2-shcDVH0lTVi0UzZe15Se0w">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tudelü AI Portal — Redirecting...</title>
+  <title>Tudelü AI Portal</title>
   <link rel="icon" type="image/png" href="/assets/logo.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; background: #111111; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    .loader {
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #111111; }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      z-index: 1;
     }
-    .loader svg { width: 48px; height: 48px; margin-bottom: 16px; }
-    .loader p { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 12px; }
-    .loader a { color: #ff5100; font-size: 13px; text-decoration: none; }
-    .loader a:hover { text-decoration: underline; }
+    .loading svg { width: 48px; height: 48px; margin-bottom: 16px; }
+    .loading p { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 12px; }
     .spinner {
       width: 24px; height: 24px;
       border: 2px solid rgba(255,81,0,0.2);
@@ -29,20 +37,34 @@
       margin-bottom: 16px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    .fallback { display: none; color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 12px; }
+    .fallback a { color: #ff5100; text-decoration: none; }
+    .fallback a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="loader">
+  <div class="loading" id="loader">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.3 33.7" fill="none">
       <path fill="#fff" d="M16.65.311C3.531.311 0 7.908 0 16.966s3.491 16.732 16.65 16.732c13.157 0 16.649-7.555 16.649-16.692 0-9.136-3.454-16.695-16.65-16.695"/>
       <path fill="#FF5100" d="M22.256 17.003v-4.858h-4.86v-4.86h-4.86v14.579h4.86v-4.861zm.001 4.861h-4.86v4.861h4.86z"/>
     </svg>
     <div class="spinner"></div>
-    <p>Launching Tudelü AI Portal...</p>
-    <a href="https://www.perplexity.ai/computer/a/tudelu-ai-portal-v2-shcDVH0lTVi0UzZe15Se0w">Click here if not redirected</a>
+    <p>Loading Tudelü AI Portal...</p>
+    <div class="fallback" id="fallback">
+      <a href="https://tudeluai-tudelu-portal.hf.space/">Open directly</a>
+    </div>
   </div>
+  <iframe 
+    src="https://tudeluai-tudelu-portal.hf.space/" 
+    id="portal" 
+    allow="clipboard-write"
+    onload="document.getElementById('loader').style.display='none';"
+  ></iframe>
   <script>
-    window.location.href = "https://www.perplexity.ai/computer/a/tudelu-ai-portal-v2-shcDVH0lTVi0UzZe15Se0w";
+    // Show fallback link after 5 seconds if iframe hasn't loaded
+    setTimeout(function() {
+      document.getElementById('fallback').style.display = 'block';
+    }, 5000);
   </script>
 </body>
 </html>
