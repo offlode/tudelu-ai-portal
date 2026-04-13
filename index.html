@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tudelü AI Operations Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <a href="/" class="navbar__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="170" height="34" style="overflow:visible" fill="none"><path fill="#fff" d="M16.65.311C3.531.311 0 7.908 0 16.966s3.491 16.732 16.65 16.732c13.157 0 16.649-7.555 16.649-16.692 0-9.136-3.454-16.695-16.65-16.695"/><path fill="#FF5100" d="M22.256 17.003v-4.858h-4.86v-4.86h-4.86v14.579h4.86v-4.861zm.001 4.861h-4.86v4.861h4.86z"/><path fill="#fff" d="M53.007 10.592h-8.093V7.485h20.117v3.107h-8.093v15.646h-3.93zM65.03 20.11v-7.951h3.649v7.18c0 2.593 1.311 4.19 5.327 4.19 3.617 0 6.697-2.05 6.697-5.613v-5.757h3.647v14.079h-3.647c.057-1.025.112-2.906.112-4.36h-.058c-.855 3.164-3.39 4.646-7.95 4.646-5.47 0-7.78-3.021-7.78-6.411zm22.05-1.084c0-3.961 3.218-7.153 9.06-7.153 3.961 0 6.128 1.11 6.867 3.049h.027V7.485h3.648v18.753h-3.648c.058-1.025.112-2.453.143-3.618h-.058c-.684 2.31-2.878 3.904-7.095 3.904-5.698 0-8.948-2.964-8.948-7.494zm15.957.17v-.425c0-2.225-2.05-4.047-6.383-4.047-3.961 0-5.954 1.853-5.954 4.302 0 2.848 2.194 4.643 5.927 4.643 4.275 0 6.41-2.565 6.41-4.472m24.67.855h-14.534c.256 2.139 1.625 3.876 5.927 3.876 3.733 0 5.045-1.11 5.273-2.279h3.334c-.17 2.453-2.592 4.875-8.607 4.875-7.436 0-9.602-3.706-9.602-7.212 0-4.503 3.447-7.436 9.374-7.436s8.832 2.678 8.832 7.038v1.138zm-3.334-2.28c0-1.88-1.509-3.303-5.358-3.303-3.532 0-5.242 1.195-5.726 3.392h11.084zm6.148-10.288h3.648v18.753h-3.648zm6.611 12.625v-7.951h3.648v7.18c0 2.593 1.312 4.19 5.328 4.19 3.617 0 6.696-2.05 6.696-5.613v-5.757h3.648v14.079h-3.648c.058-1.025.112-2.906.112-4.36h-.057c-.855 3.164-3.39 4.646-7.95 4.646-5.471 0-7.78-3.021-7.78-6.411zm21.684 3.818a2.596 2.596 0 0 1 2.592-2.592 2.596 2.596 0 0 1 2.593 2.592 2.6 2.6 0 0 1-2.593 2.593 2.6 2.6 0 0 1-2.592-2.593m4.844 0a2.25 2.25 0 0 0-2.252-2.251 2.253 2.253 0 1 0 2.252 2.252m-3.352-1.37h1.189c.702 0 1.022.31 1.022.74 0 .249-.089.48-.365.603v.014c.283.105.365.32.365.552v.773h-.497v-.773c0-.208-.103-.327-.389-.327h-.831v1.1h-.494v-2.684zm1.189 1.183c.378 0 .525-.123.525-.378 0-.201-.116-.365-.566-.365h-.657v.743z"/><path fill="#fff" d="M146.002 8.943h-3.648v3.649h3.648zm5.224 0h-3.648v3.649h3.648z"/></svg>
+    </a>
+    <div class="navbar__right">
+      <span class="navbar__label">AI Operations Portal</span>
+      <span class="navbar__badge">v1.0</span>
+    </div>
+  </nav>
+
+  <!-- ===== Landing (shown before login) ===== -->
+  <div id="landing">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero__headline fade-in">Your AI Operations<br>Assistant</h1>
+      <p class="hero__sub fade-in fade-in-delay-1">Tudelü AI manages your pipeline, tracks your deals, follows up with customers, and keeps you on top of everything — automatically.</p>
+      <button class="hero__cta fade-in fade-in-delay-2" onclick="document.getElementById('login-section').scrollIntoView({behavior:'smooth'})">
+        Sign In to Get Started
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="hero__version fade-in fade-in-delay-3">Version 1.0 — Updated weekly</p>
+    </section>
+
+    <!-- Features preview -->
+    <section class="section section--light">
+      <div class="section__inner">
+        <h2 class="section__title">What Your AI Can Do</h2>
+        <p class="section__subtitle">Every Tudelü team member gets a personal AI assistant. Just email it.</p>
+        <div class="feature-grid">
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon feature-card__icon--deals">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Deal Status</h3>
+            <p class="feature-card__example">"What's the status of the West Ridge Mall deal?"</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-1">
+            <div class="feature-card__icon feature-card__icon--followup">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Customer Follow-ups</h3>
+            <p class="feature-card__example">"Follow up with John at Elliano's about the quote."</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-2">
+            <div class="feature-card__icon feature-card__icon--log">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="feature-card__title">Log Interactions</h3>
+            <p class="feature-card__example">"I spoke with Coffee & Boba — they want a revised quote."</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-3">
+            <div class="feature-card__icon feature-card__icon--pipeline">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="feature-card__title">Pipeline Summary</h3>
+            <p class="feature-card__example">"Show me my pipeline" or "What deals do I have?"</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-4">
+            <div class="feature-card__icon feature-card__icon--email">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="feature-card__title">Draft Emails</h3>
+            <p class="feature-card__example">"Draft a follow-up email to the CNF project contact."</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-4">
+            <div class="feature-card__icon feature-card__icon--reminder">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="feature-card__title">Reminders</h3>
+            <p class="feature-card__example">"Remind me to call Diamond Nation tomorrow at 10am."</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-4">
+            <div class="feature-card__icon feature-card__icon--crm">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="feature-card__title">CRM Updates</h3>
+            <p class="feature-card__example">"Add a note to the Spire Retail deal — meeting scheduled for Friday."</p>
+          </div>
+          <div class="feature-card fade-in fade-in-delay-4">
+            <div class="feature-card__icon feature-card__icon--coaching">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Sales Coaching</h3>
+            <p class="feature-card__example">"I need help closing this deal — customer is stalling."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section section--white">
+      <div class="section__inner">
+        <div class="howto-box">
+          <h3 class="howto-box__title">How It Works</h3>
+          <ol class="howto-list">
+            <li>
+              <span class="howto-num">1</span>
+              <span><strong>Sign in</strong> with your Tudelü email below.</span>
+            </li>
+            <li>
+              <span class="howto-num">2</span>
+              <span><strong>Email your AI</strong> at <strong>chaim.fischer@tudelu.com</strong> — just write what you need in plain English. The AI monitors this inbox and responds to every team member.</span>
+            </li>
+            <li>
+              <span class="howto-num">3</span>
+              <span><strong>Get a response</strong> — the AI will reply in the same email thread with your answer, status update, or next steps.</span>
+            </li>
+            <li>
+              <span class="howto-num">4</span>
+              <span><strong>Give it orders</strong> — ask it to follow up with a customer, draft an email, remind you about a deal, or log a CRM interaction. It works for you. <span class="howto-badge">New</span></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login -->
+    <section id="login-section" class="login-section">
+      <div class="login-card fade-in">
+        <div class="login-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h2 class="login-card__title">Sign In</h2>
+        <p class="login-card__desc">Enter your Tudelü email to access your AI dashboard.</p>
+        <form class="login-card__form" id="login-form" onsubmit="return handleLogin(event)">
+          <input class="login-card__input" type="email" id="login-email" placeholder="name@tudelu.com" required autocomplete="email" autofocus>
+          <p class="login-card__error" id="login-error">Please use your @tudelu.com email address.</p>
+          <button type="submit" class="btn btn--primary">Sign In</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Dashboard (shown after login) ===== -->
+  <div id="dashboard" class="dashboard">
+
+    <!-- Welcome bar -->
+    <div class="welcome-bar">
+      <div class="welcome-bar__inner">
+        <div class="welcome-bar__left">
+          <div class="welcome-bar__text">
+            <h2 id="welcome-name">Welcome</h2>
+            <p id="welcome-email">—</p>
+          </div>
+        </div>
+        <div class="welcome-bar__status">
+          <span class="status-dot">AI Active</span>
+          <button class="signout-link" onclick="handleSignOut()">Sign out</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your AI Features -->
+    <section class="section section--light">
+      <div class="section__inner">
+        <h2 class="section__title">Your AI Dashboard</h2>
+        <p class="section__subtitle">Email your AI at <strong>chaim.fischer@tudelu.com</strong> — here's everything it can do for you.</p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--deals">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Check Deal Status</h3>
+            <p class="feature-card__example">"What's the status of [customer name]?"<br>"Any updates on my pending signature deals?"</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--followup">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Request Follow-ups</h3>
+            <p class="feature-card__example">"Follow up with [customer] about the quote"<br>"Remind me to call [contact] tomorrow"</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--log">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="feature-card__title">Log Interactions</h3>
+            <p class="feature-card__example">"I spoke with [customer] — they want a revised quote"<br>"Add a note: meeting scheduled for Friday"</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--pipeline">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="feature-card__title">View Your Pipeline</h3>
+            <p class="feature-card__example">"Show me my pipeline"<br>"What deals do I have in communication?"</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--email">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="feature-card__title">Draft Emails</h3>
+            <p class="feature-card__example">"Draft a follow-up email to [customer]"<br>"Can you send [customer] a check-in?"</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--coaching">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Get Help</h3>
+            <p class="feature-card__example">"I need help closing this deal"<br>"Customer is asking about installation — what should I say?"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Your Info -->
+    <section class="section section--white">
+      <div class="section__inner">
+        <h2 class="section__title">Your Information</h2>
+        <p class="section__subtitle">Your profile as it appears in the Tudelü AI system.</p>
+        <div class="info-form" id="info-form">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="info-name" readonly>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="info-email" readonly>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <input type="text" id="info-role" readonly>
+          </div>
+          <div class="form-group">
+            <label>AI Email Contact</label>
+            <input type="text" value="chaim.fischer@tudelu.com" readonly>
+            <span class="form-hint">Send emails here to interact with your AI assistant.</span>
+          </div>
+          <div class="form-group">
+            <label>Preferred Name (optional)</label>
+            <input type="text" id="info-preferred-name" placeholder="How should the AI address you?">
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <button class="btn btn--save" onclick="savePreferences()">Save Preferences</button>
+            <span class="save-confirm" id="save-confirm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Saved
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback & Notes -->
+    <section class="section section--light">
+      <div class="section__inner feedback-section">
+        <h2 class="section__title">Feedback & Improvement Notes</h2>
+        <p class="section__subtitle">Help us make your AI better. Tell us what's working and what's not.</p>
+
+        <div class="feedback-card">
+          <h3 class="feedback-card__title">Submit Feedback</h3>
+          <p class="feedback-card__desc">What should the AI do differently? What features do you want? What went wrong?</p>
+          <textarea id="feedback-text" placeholder="Example: The AI should remember that I prefer to be contacted before 3pm. Or: I need a feature that shows me all my bids in one place."></textarea>
+          <div class="feedback-card__actions">
+            <button class="btn btn--save" onclick="submitFeedback()">Submit Feedback</button>
+            <span class="feedback-confirm" id="feedback-confirm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Submitted — we'll review this
+            </span>
+          </div>
+          <p class="feedback-card__note">Your feedback goes directly to the AI development team. We review every submission and incorporate improvements into weekly updates.</p>
+        </div>
+
+        <div class="updates-card">
+          <h3 class="updates-card__title">Release History</h3>
+
+          <div class="update-item update-item--current">
+            <div class="update-item__version">v1.0 — April 13, 2026 <span class="update-badge update-badge--live">Live</span></div>
+            <div class="update-item__text">
+              Initial launch. Email-based AI assistant for all team members. Features: deal status, pipeline summaries, customer follow-ups, interaction logging, email drafting, reminders, CRM updates, and sales coaching. Daily wrap-up emails and morning briefs active.
+            </div>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__version">v1.1 — April 20, 2026 <span class="update-badge update-badge--coming">Coming</span></div>
+            <div class="update-item__text">
+              WhatsApp integration (message your AI directly). Faster response times. Improved deal intelligence with automatic stale-deal detection.
+            </div>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__version">v1.2 — April 27, 2026 <span class="update-badge update-badge--coming">Coming</span></div>
+            <div class="update-item__text">
+              Bid tracking dashboard. Automatic quote follow-ups. Customer response time alerts. Personalized daily action plans.
+            </div>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__version">v2.0 — May 2026 <span class="update-badge update-badge--coming">Coming</span></div>
+            <div class="update-item__text">
+              Full CRM integration with real-time deal updates. Voice commands. Mobile app. AI-powered sales forecasting.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <strong>Tudelü AI Operations Portal</strong><br>
+    &copy; 2026 Tudelü. All rights reserved.<br>
+    Questions? Email <strong>chaim.fischer@tudelu.com</strong>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
