@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tudelü AI Portal</title>
+  <title>Tudelü AI Portal v2</title>
   <link rel="icon" type="image/png" href="/assets/logo.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; overflow: hidden; background: #111111; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     iframe {
       width: 100%;
       height: 100%;
@@ -37,6 +37,7 @@
       margin-bottom: 16px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    .version { color: rgba(255,255,255,0.3); font-size: 11px; margin-top: 8px; }
     .fallback { display: none; color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 12px; }
     .fallback a { color: #ff5100; text-decoration: none; }
     .fallback a:hover { text-decoration: underline; }
@@ -49,22 +50,22 @@
       <path fill="#FF5100" d="M22.256 17.003v-4.858h-4.86v-4.86h-4.86v14.579h4.86v-4.861zm.001 4.861h-4.86v4.861h4.86z"/>
     </svg>
     <div class="spinner"></div>
-    <p>Loading Tudelü AI Portal...</p>
+    <p>Loading Tudelü AI v2...</p>
+    <span class="version">Powered by GPT-5.4</span>
     <div class="fallback" id="fallback">
-      <a href="https://tudeluai-tudelu-portal.hf.space/">Open directly</a>
+      Taking longer than expected. <a href="https://www.perplexity.ai/computer/a/tudelu-ai-operations-platform-4pQNeNUsQee8PRny8n_sjg" target="_blank">Open V2 directly</a>
     </div>
   </div>
   <iframe 
-    src="https://tudeluai-tudelu-portal.hf.space/" 
+    src="https://www.perplexity.ai/computer/a/tudelu-ai-operations-platform-4pQNeNUsQee8PRny8n_sjg" 
     id="portal" 
     allow="clipboard-write"
     onload="document.getElementById('loader').style.display='none';"
   ></iframe>
   <script>
-    // Show fallback link after 5 seconds if iframe hasn't loaded
     setTimeout(function() {
       document.getElementById('fallback').style.display = 'block';
-    }, 5000);
+    }, 8000);
   </script>
 </body>
 </html>
