@@ -5,38 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tudelü AI Portal v2</title>
   <link rel="icon" type="image/png" href="/assets/logo.png">
-  <meta http-equiv="refresh" content="0;url=https://www.perplexity.ai/computer/a/tudelu-ai-operations-platform-4pQNeNUsQee8PRny8n_sjg">
+  <meta name="description" content="Tudelü AI Operations Portal">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; align-items: center; justify-content: center; }
-    .container { text-align: center; }
-    .container svg { width: 48px; height: 48px; margin-bottom: 16px; }
-    .container h1 { color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-    .container p { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 24px; }
-    .container a {
-      display: inline-block;
-      background: #FF5100;
-      color: #fff;
-      padding: 10px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .portal-frame {
+      width: 100%;
+      height: 100vh;
+      border: 0;
+      display: block;
     }
-    .container a:hover { background: #e04900; }
-    .version { color: rgba(255,255,255,0.25); font-size: 11px; margin-top: 24px; }
+    .loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #0F172A;
+      color: #fff;
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+    .loading.hidden { opacity: 0; pointer-events: none; }
+    .loading svg { width: 48px; height: 48px; margin-bottom: 16px; animation: pulse 1.5s ease-in-out infinite; }
+    .loading h1 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    .loading p { color: rgba(255,255,255,0.5); font-size: 14px; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="loading" id="loading">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.3 33.7" fill="none">
       <path fill="#fff" d="M16.65.311C3.531.311 0 7.908 0 16.966s3.491 16.732 16.65 16.732c13.157 0 16.649-7.555 16.649-16.692 0-9.136-3.454-16.695-16.65-16.695"/>
       <path fill="#FF5100" d="M22.256 17.003v-4.858h-4.86v-4.86h-4.86v14.579h4.86v-4.861zm.001 4.861h-4.86v4.861h4.86z"/>
     </svg>
     <h1>Tudelü AI v2</h1>
-    <p>Redirecting to the new platform...</p>
-    <a href="https://www.perplexity.ai/computer/a/tudelu-ai-operations-platform-4pQNeNUsQee8PRny8n_sjg">Open Tudelü AI v2</a>
-    <p class="version">Powered by GPT-5.4</p>
+    <p>Loading your portal...</p>
   </div>
+  <iframe
+    class="portal-frame"
+    src="https://tudeluai-tudelu-portal.hf.space"
+    title="Tudelü AI Portal"
+    allow="clipboard-read; clipboard-write; microphone; camera; fullscreen"
+    onload="document.getElementById('loading').classList.add('hidden')"
+  ></iframe>
 </body>
 </html>
